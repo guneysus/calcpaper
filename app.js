@@ -575,9 +575,9 @@ var execute = function () {
   var result;
   try {
     result = eval(content);
-  } catch(ex) {
+  } catch(e) {
     (console.error || console.log).call(console, e.stack || e);
-    result = ex.message;
+    result = e.message;
   }
 
   document.querySelector(".result-area").innerText = result;
