@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calc Paper</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"
+    integrity="sha256-PHkGItNLOKwncPJgy7PBTvpxormE+UVUp7sHVEYEvKg=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css"
+    integrity="sha256-PWWDlCsO+b6rKHz9dgBeS5cqTmBbebfAtNXnEqy3Xvc=" crossorigin="anonymous" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.js"
+    integrity="sha256-3MqUabPjPtCFlcq/gEglX9cdKhK8oihs44hT7xW8MgE=" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css"
+    integrity="sha256-XiJ+PedljEmPP2VaQzSzekfCZdPr0fpqmh9dY6kpsuQ=" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/theme/darcula.min.css" />
+
+
+  <!-- Show Hint -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/show-hint.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/show-hint.css" />
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+
+</head>
+
+<body>
+
+
+  <div class="mw7 center pa3 code debug-grid">
+    <div class="cf ph2-ns">
+      <div class="fl w-100 pa2">
+        <div class="ba b--dashed bw1 br4 b--light-green bg-washed-yellow pv4">
+          <div id="app" class="ma2">
+            <h2>{{ message }}</h2>
+            <p>{{ description }}</p>
+
+            <!-- <input v-model="message" class="input-reset dark-red ba b--light-gray pa2 ph3 bg-white br-pill"> -->
+
+            <div class="ba bw1 b--light-gray mh3">
+              <textarea id="code-area" class="input-reset pa2 ph3 bg-white">function myScript(){
+  return 100;
+}
+</textarea>
+
+            </div>
+
+            <button v-on:click="changeMessage"
+              class="input-reset button-reset ba b--light-gray bg-near-white mv3 ph3 pa2 br-pill">execute</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+
+
+</body>
+
+</html>
