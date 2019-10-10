@@ -572,8 +572,13 @@ codeArea.change = function() {
 var execute = function () {
 
   var content = codeArea.getValue();
-
-  var result = eval(content);
+  var result;
+  try {
+    result = eval(content);
+  } catch(ex) {
+    (console.error || console.log).call(console, e.stack || e);
+    result = ex.message;
+  }
 
   document.querySelector(".result-area").innerText = result;
   console.log(result)
