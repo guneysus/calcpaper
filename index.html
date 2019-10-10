@@ -33,31 +33,54 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
 
+  <script
+    src="https://raw.githubusercontent.com/guneysus/numericaljs/master/src/index.js?token=AAHHX4CV7SDTT5RJUJL2IGK5VBIBU"></script>
+
+  <script src="/fn/math.js"></script>
+
 </head>
 
 <body>
 
 
-  <div class="mw7 center pa3 code debug-grid">
-    <div class="cf ph2-ns">
-      <div class="fl w-100 pa2">
+  <div class="mw-100 center debug-grid">
+    <div class="cf">
+      <div class="fl w-100 ph7 pv6">
         <div class="ba b--dashed bw1 br4 b--light-green bg-washed-yellow pv4">
           <div id="app" class="ma2">
-            <h2>{{ message }}</h2>
-            <p>{{ description }}</p>
+            <h2></h2>
+            <p></p>
 
             <!-- <input v-model="message" class="input-reset dark-red ba b--light-gray pa2 ph3 bg-white br-pill"> -->
 
-            <div class="ba bw1 b--light-gray mh3">
-              <textarea id="code-area" class="input-reset pa2 ph3 bg-white">function myScript(){
-  return 100;
-}
+            <div class="ba bw1 b--light-gray mh5 ">
+              <textarea rows="2" id="code-area" class="input-reset bg-white">
+var normalizedRate = 0.0168 * 1.20;
+var presentValue = -799.00;
+var rate = 6;
+
+"₺" + (PMT(normalizedRate, rate, presentValue, 0) * 6).toFixed(2)
 </textarea>
+            </div>
+
+            <div class="ba bw1 b--light-gray mh5 mv3">
+              <div class="results-container">
+
+                <h3 class="code f3 bb mh0 mt2 ma0 ph3 pv1 mw4">result</h3>
+                <pre class="f4 lh-copy result-area ph3 mv0 bg-washed-red">
+                </pre>
+              </div>
 
             </div>
 
-            <button v-on:click="changeMessage"
-              class="input-reset button-reset ba b--light-gray bg-near-white mv3 ph3 pa2 br-pill">execute</button>
+
+            <button v-on:click="changeMessage" onclick="execute()" 
+            class="
+                  input-reset button-reset
+                  code
+                  mh5 ph5 pv3
+                  bg-near-white
+                  br-pill">execute</button>
           </div>
 
         </div>
